@@ -1,0 +1,155 @@
+body{
+  background-color: #4BB5CD;
+}
+.App {
+  text-align: center;
+}
+* {
+  box-sizing: border-box;
+}
+.header{
+  padding: 50px;
+  background-image: url(https://img.europapress.es/fotoweb/fotonoticia_20210620111333_1200.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:100%;
+  height:200px; 
+  background-position: 0 -90px;
+}
+
+.logo{
+  position: relative;
+  bottom: 40px;
+  max-width: 45%;
+  height: 100%;
+}
+
+.label{
+  font-size: 20px;
+  padding: 10px;
+  margin: 1px;
+  color: white;
+  text-shadow: 0 2px 6px #B2E041;
+}
+
+.comand{
+  margin: 15px;
+  text-align: center;
+}
+
+.data{
+  margin: 30px;
+  display: inline;
+  font-size: 22px;
+  color: aliceblue;
+}
+.data span{
+  text-shadow: 2px 2px #341292;
+}
+
+.border{
+  padding: 2px;
+  border-radius: 10px;
+  border: 4px ridge #B2E041;
+}
+
+.container {
+  display: grid;
+  grid-auto-columns: minmax(10rem, auto);
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-gap: 1rem;
+}
+.item {
+  text-align: center;
+  width: 300px;
+}
+
+
+/* Style the counter cards */
+.card {
+  margin: 40px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+.imgC{
+  max-width: 90% ;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 #4BB5CD;
+}
+
+.people{
+  background-color: white;
+  border-radius: 10px;
+  font-size: 20px;
+  margin: 16px;
+  padding: 10px;
+  color: #341292;
+  text-shadow: 0 5px 10px #341292;
+}
+
+.hidden{
+ display: none;
+}
+
+.char-name{
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-decoration: underline #B2E041 wavy;
+}
+
+.dead{
+  background-color: red;
+  border-radius: 10px;
+  margin: 10px;
+  color: white;
+}
+
+.alive{
+  background-color: #B2E041;
+  border-radius: 10px;
+  margin: 10px;
+  color: rgb(28, 28, 28);
+}
+
+.text{
+  font-size: 18px;
+  margin: 10px;
+  max-width: 400px;
+}
+
+.loading {
+  background: url("./img/portal.png") no-repeat;
+  width: 300px;
+  height: 300px;
+  animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+input[type=number] {
+  background-color: white;
+  border-color: #B2E041;
+}
+
+.btn{
+  border-radius: 10px;
+  color: #2b869b;
+  font-size: 17px;
+  margin-left: 15px;
+}
+
+.title{
+  color: #f1f1f1;
+  text-decoration: underline #B2E041;
+  margin-bottom: 29px;
+}
