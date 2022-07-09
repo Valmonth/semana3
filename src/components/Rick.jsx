@@ -39,15 +39,18 @@ console.log(rick.residents?.length)
             <p className='data border'>Type: <span>{rick.type}</span></p>
             <p className='data border'>Dimension: <span>{rick.dimension}</span></p>
             <p className='data border'>Population: <span>{rick.residents?.length}</span> </p>
-            <div className={`${rick.residents?.length === 0 ? "people" : "hidden"}`}>No hay habitantes en esta dimension</div>
+            <div className={`${rick.residents?.length === 0 ? "people" : "hidden"}`}>No one lives in this dimension</div>
             <div className='container'>
                 {rick.residents?.map(resident =>(
                     <Residents key={resident} resident={resident}/>
                     
                 ))}
             </div>
-
+            <footer>
+            <p>Author: James Hernandez G</p>
+            </footer>
         </div>
+       
     );
 };
 
