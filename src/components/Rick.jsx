@@ -7,6 +7,7 @@ import ResidentInfo from './ResidentInfo';
 const Rick = () => {
 const [ rick, setRick ] = useState({})
 const [ search, setSearch ] = useState("")
+const [ msg,  setMsg ] = useState("")
 useEffect(()=>{
     const ramdom= Math.floor(Math.random() * 126) + 1;
     axios.get((`https://rickandmortyapi.com/api/location/${ramdom}`))
@@ -16,11 +17,21 @@ useEffect(()=>{
 const searching = () =>{
     axios.get((`https://rickandmortyapi.com/api/location/${search}`))
     .then(res => setRick(res.data)); 
+    minMax();
 }
 
+const minMax = () =>{
+    if (search >= 127){
+setMsg("This number of dimension it's not avaible for now, try another number between 1 to 126")
+return msg;
+    } else{
+        setMsg("")
+    }
+}
 const handleKeyDown = event => {
     if (event.key === 'Enter') { 
       searching();
+      minMax();
     }
   };
 
@@ -29,8 +40,9 @@ const handleKeyDown = event => {
         <div>
             <div className='comand'>
             <label className='label'>Search Location: </label>
-            <input  type='number' onChange={e =>setSearch(e.target.value)} onKeyDown={handleKeyDown}value={search}/>
+            <input placeholder='ENTER 1 - 126'  type='number' onChange={e =>setSearch(e.target.value)} onKeyDown={handleKeyDown} value={search}/>
             <button className='btn'onClick={searching}>SEARCH</button>
+             <div className='notAvailble'>{msg}</div>
             </div>
             <h1 className='title'>Location: {rick.name}</h1>
             <p className='data border'>Type: <span>{rick.type}</span></p>

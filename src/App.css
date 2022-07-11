@@ -159,3 +159,10 @@ footer {
   background-color: #B2E041;
   color: white;
 }
+
+.notAvailble{
+  color: red;
+  margin: 10px;
+  background-color: #B2E041;
+  border-radius: 10px;
+}
