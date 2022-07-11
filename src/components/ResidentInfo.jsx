@@ -12,7 +12,6 @@ const Residents = ({resident}) => {
         .finally(() => setLoading(false));
     },[])
 
-console.log(loading);
     return (
         <div className='item'>
             {loading ? (

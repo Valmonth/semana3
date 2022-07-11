@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from "react";
 import axios from 'axios';
-import Residents from './Residents';
+import ResidentInfo from './ResidentInfo';
 
 
 const Rick = () => {
@@ -19,15 +19,12 @@ const searching = () =>{
 }
 
 const handleKeyDown = event => {
-    console.log('User pressed: ', event.key);
-    if (event.key === 'Enter') {
-      
-      console.log('Enter key pressed');
+    if (event.key === 'Enter') { 
       searching();
     }
   };
 
-console.log(rick.residents?.length)
+
     return (
         <div>
             <div className='comand'>
@@ -42,7 +39,7 @@ console.log(rick.residents?.length)
             <div className={`${rick.residents?.length === 0 ? "people" : "hidden"}`}>No one lives in this dimension</div>
             <div className='container'>
                 {rick.residents?.map(resident =>(
-                    <Residents key={resident} resident={resident}/>
+                    <ResidentInfo key={resident} resident={resident}/>
                     
                 ))}
             </div>
